@@ -1,0 +1,2 @@
+https://www.example.com/ --throttle 2000
+http://blog.example.com/ 
