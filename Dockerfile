@@ -1,4 +1,4 @@
 FROM wpscanteam/wpscan:latest 
-MAINTAINER Markus Krell <markus@friendly-intruder.de>
-RUN /wpscan/wpscan.rb --update -v
-ENTRYPOINT ["/share/start.sh"]
+MAINTAINER Joseph Anthony C. Hermocilla <jachermocilla@gmail.com>
+RUN wpscan --update -v
+ENTRYPOINT ["sh","/shared/start.sh"]

@@ -1,0 +1,6 @@
+version: "3"
+services:
+  wpscan-docker:
+    build: .
+    volumes:
+      - ./shared:/shared
