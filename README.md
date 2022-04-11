@@ -1,4 +1,10 @@
-Cron-scheduled wpscans sites using docker
+### Introduction
+
+Cron-scheduled wpscan Wordpress sites using docker and docker compose with results 
+posted to a slack channel.
+
+
+### Usage
 
 
 `docker-compose build`
