@@ -4,7 +4,7 @@ RUN wpscan --update -v
 
 USER root
 
-RUN apk update && apk add bash
+RUN apk update && apk add bash curl
 
 RUN mkdir -p /shared/archive
 WORKDIR /shared

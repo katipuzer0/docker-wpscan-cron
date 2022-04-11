@@ -16,5 +16,8 @@ while read p; do
   #wpscan --url $TARGET --random-user-agent --ignore-main-redirect --enumerate vp,vt,u --no-banner 
   #wpscan --url $TARGET --random-user-agent --ignore-main-redirect --enumerate vp,vt,u 
   #wpscan --url $TARGET --detection-mode aggressive --random-user-agent --ignore-main-redirect --force --wp-content-dir wp-content --api-token $WPSCAN_API_TOKEN --enumerate u,vp,vt,tt,cb,dbe -f cli-no-color | tee /shared/archive/$TARGET.wpscan.`date +"%Y-%m-%d"`
-  wpscan --url $TARGET --detection-mode aggressive --random-user-agent --ignore-main-redirect --force --wp-content-dir wp-content --enumerate u,vp,vt,tt,cb,dbe -f cli-no-color | tee /shared/archive/$TARGET.wpscan.`date +"%Y-%m-%d"`
+  RESULT_FILENAME=$TARGET.wpscan.`date +"%Y-%m-%d"`
+  wpscan --url $TARGET --detection-mode aggressive --random-user-agent --ignore-main-redirect --force --no-banner  --api-token $WPSCAN_API_TOKEN --wp-content-dir wp-content --enumerate u,vp,vt,tt,cb,dbe -f cli-no-color | tee /shared/archive/$RESULT_FILENAME
+  curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' $SLACK_WEBHOOK_URL
+
 done <$wpfile
