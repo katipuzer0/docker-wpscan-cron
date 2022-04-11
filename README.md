@@ -1,10 +1,14 @@
 ### Introduction
 
-Cron-scheduled wpscan Wordpress sites using docker and docker compose with results 
-posted to a slack channel.
+Cron-schedule WPScan of Wordpress sites using docker and docker-compose with results 
+being posted to a slack channel.
 
 
 ### Usage
+
+* Edit crontab.txt to reflect the desired schedule to run the scan
+* Set the Slack Webhook Token
+* Set the WPScan API Token
 
 
 `docker-compose build`
