@@ -3,5 +3,5 @@ services:
   wpscan-docker:
     build: .
     environment:
-      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - SLACK_OAUTH_TOKEN=${SLACK_OAUTH_TOKEN}
       - WPSCAN_API_TOKEN=${WPSCAN_API_TOKEN}  

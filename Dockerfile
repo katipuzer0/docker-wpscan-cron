@@ -4,7 +4,9 @@ RUN wpscan --update -v
 
 USER root
 
-RUN apk update && apk add bash curl
+RUN apk update && apk add bash curl python3 py3-pip
+RUN python3 -m pip install wpscan-out-parse
+
 
 RUN mkdir -p /shared/archive
 WORKDIR /shared

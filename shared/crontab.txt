@@ -1,1 +1,5 @@
-*/3 * * * * /shared/start.sh >> /shared/start.log
+# for testing, every 3 mins
+#*/3 * * * * /shared/start.sh >> /shared/start.log
+
+#Perform the scan every Tuesday and Saturday
+0 0 * * 2,6 /shared/start.sh >> /shared/start.log
