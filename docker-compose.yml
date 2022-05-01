@@ -6,4 +6,4 @@ services:
       - SLACK_OAUTH_TOKEN=${SLACK_OAUTH_TOKEN}
       - WPSCAN_API_TOKEN=${WPSCAN_API_TOKEN}  
       - SLACK_CHANNEL=${SLACK_CHANNEL}  
-    restart: always
+        #restart: always
